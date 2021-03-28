@@ -1,0 +1,28 @@
+.messages {
+    
+    display: flex;
+    flex-direction: column;
+    border: 5px solid;
+    height: 600px;
+    width: 900px;
+    margin: 50px 50px 0px 0px;
+    border-radius: 50px; 
+}
+.message__body {
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    overflow-y: scroll;
+}
+.message__footer_{
+    align-self: center;
+    position: relative;
+    margin-top: auto;
+    width: 90%;
+}
+
+.message__input{
+    width: 400px;
+    height: 30px;
+    border-radius: 20px;
+}
