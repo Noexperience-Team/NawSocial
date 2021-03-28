@@ -1,0 +1,8 @@
+.app {
+  width: 100%;
+  background-color: #eff2f5;
+  /*background-image: linear-gradient(to right, #006466, #4d194d);*/
+}
+.app__body {
+  display: flex;
+}
