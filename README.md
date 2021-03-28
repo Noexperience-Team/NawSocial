@@ -1,2 +1,2 @@
 # NawSocial
-It s a web app created by reactjs built for developpers to ask questions and find answers make friends 
+It s a web app created with reactjs built for developpers to ask questions and find answers make friends 
