@@ -1,0 +1,62 @@
+.auth__page {
+  width: 100%;
+  height: fit-content;
+
+  justify-content: center;
+  position: relative;
+}
+
+.logo {
+  position: absolute;
+  top: 50%;
+  left: 15%;
+  transform: translate(-50%, -50%);
+
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+.logo > img {
+  height: 100px;
+}
+.auth__page form {
+  padding: 50px 20px;
+}
+.logo > h2 {
+}
+.auth__page > form {
+}
+.login {
+  width: 800px;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 5px solid #000000;
+  box-shadow: 0px 5px 17px -7px rgba(0, 0, 0, 0.75);
+  border-radius: 10px;
+}
+.auth__page form .pass {
+  position: relative;
+}
+.auth__page form {
+  text-align: right;
+}
+.auth__page form .pass small {
+  position: absolute;
+  top: 50%;
+  right: 5px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  opacity: 0.5;
+}
+.check {
+  justify-content: center;
+  flex-direction: row;
+}
+.check input {
+  margin: 20px;
+}
