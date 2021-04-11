@@ -25,7 +25,6 @@ code {
   background-color: #d8f3dc;
 }
 .main {
-  max-width: 1000px;
-  width: 100%;
+  min-width: 25%;
   margin: auto;
 }

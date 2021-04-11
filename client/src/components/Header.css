@@ -1,0 +1,104 @@
+.header {
+  display: flex;
+  padding: 15px 20px;
+  justify-content: space-between;
+  position: sticky;
+
+  /*background-color: #353535;*/
+  background-image: linear-gradient(to left, #522352, #066364);
+  z-index: 100;
+  top: 0;
+  height: wrap;
+  box-shadow: 0px 5px 8px -9px rgba(41, 40, 40, 0.75);
+  min-width: 25%;
+}
+.header__left {
+  display: flex;
+  justify-content: space-evenly;
+  min-width: 0;
+}
+.link {
+  width: 50px;
+  height: 50px;
+}
+.header__left > img {
+  height: 50px;
+}
+.header__input {
+  display: flex;
+  align-items: center;
+  background-color: #eff2f5;
+  padding: 10px;
+  margin-left: 30px;
+  border-radius: 33px;
+  min-width: 45px;
+}
+.header__input > input {
+  border: none;
+  background-color: transparent;
+  outline-width: 0;
+  min-width: 0;
+}
+.header__centre {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  width: wrap;
+}
+.header__option {
+  display: flex;
+  align-items: center;
+  padding: 0 30px;
+  cursor: pointer;
+  width: wrap;
+}
+.header__option:hover {
+  background-color: #eff2f5;
+  border-radius: 10px;
+
+  border-bottom: none;
+}
+.material-icons {
+  font-size: 36px;
+}
+.header__option--active {
+  border-bottom: 4px solid #f4f3ee;
+}
+.header__option > .MuiSvgIcon-root {
+  color: #cfcbc4;
+  width: 36px;
+  height: 36px;
+}
+.header__option:hover > .MuiSvgIcon-root {
+  color: #353535;
+}
+.header__option--active > .MuiSvgIcon-root {
+  color: #f4f3ee;
+}
+.header__info {
+  display: flex;
+  align-items: center;
+  color: #bcb8b1;
+  min-width: 0;
+}
+.header__info > h4 {
+  margin-left: 10px;
+  min-width: 0;
+}
+.header__right {
+  display: flex;
+}
+.MuiButtonBase-root > .MuiIconButton-label > .MuiSvgIcon-root {
+  color: #bcb8b1;
+}
+.MuiButtonBase-root:hover {
+  color: #bcb8b1;
+}
+.drop {
+  width: wrap;
+  height: wrap;
+  margin-top: 5px;
+  margin-right: 5px;
+  position: relative;
+  left: 30px;
+}

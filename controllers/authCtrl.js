@@ -10,8 +10,7 @@ const authCtrl = {
       if (user_name)
         return res.status(400).json({ msg: "This user name already exixsts." });
       const user_email = await User.findOne({ email });
-      if (user_email)
-        return res.status(400).json({ msg: "This email already exixsts." });
+      if (user_email) return res.status(400).json({ msg: "الأدريسة فما منها" });
       if (password.length < 6)
         return res
           .status(400)
@@ -30,7 +29,7 @@ const authCtrl = {
       res.cookie("refreshtoken", refresh_token, {
         httpOnly: true,
         path: "/api/refrech_token",
-        maxAge: 30 * 7 * 24 * 60 * 60 * 1000,
+        maxAge: 30 * 24 * 60 * 60 * 1000,
       });
       await newUser.save();
       res.json({
@@ -92,7 +91,7 @@ const authCtrl = {
         process.env.REFRESH_TOKEN_SECRET,
         async (err, result) => {
           if (err) return res.status(400).json({ msg: "please login now." });
-          const user = await (await User.findById(result.id))
+          const user = await User.findById(result.id)
             .select("-password")
             .populate("followers following", "-password");
           if (!user)
@@ -104,7 +103,6 @@ const authCtrl = {
           });
         }
       );
-      res.json({ rf_token });
     } catch (err) {
       return res.status(500).json({ msg: err.message });
     }

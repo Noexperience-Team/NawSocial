@@ -26,7 +26,7 @@ mongoose.connect(
     console.log("connected to mongo babyy");
   }
 );
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 3001;
 app.listen(port, () => {
   console.log("Server is runninig on port ", port);
 });

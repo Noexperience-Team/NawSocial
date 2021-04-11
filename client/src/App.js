@@ -4,6 +4,7 @@ import PageRender from "./PageRender";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Alert from "./components/alert/Alert";
+import Header from './components/Header'
 import { useSelector, useDispatch } from "react-redux";
 import { refreshToken } from "./redux/actions/authAction";
 function App() {
@@ -14,11 +15,13 @@ function App() {
   }, [dispatch]);
   return (
     <Router>
-      <Alert />
+      
       <input type="checkbox" id="theme" />
 
       <div className="App">
         <div className="main">
+        {auth.token &&<Header/>}
+        <Alert />
           <Route exact path="/" component={auth.token ? Home : Login} />
           <Route exact path="/:page" component={PageRender} />
           <Route exact path="/:page/id" component={PageRender} />
