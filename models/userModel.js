@@ -30,6 +30,11 @@ const userSchema = new mongoose.Schema(
       default:
         "https://cdn.trendhunterstatic.com/thumbs/human-facebook-default-avatar.jpeg",
     },
+    coverture: {
+      type: String,
+      default:
+        "http://2.bp.blogspot.com/-FhhuGrUAI_s/VEfIuD83P-I/AAAAAAAAasA/j4bOTM9m_4k/s1600/couverture-facebook-developer_06.jpg",
+    },
     role: {
       type: String,
       default: "Student",

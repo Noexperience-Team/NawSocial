@@ -1,17 +1,17 @@
-import React, { useState,useEffect } from "react";
-import { Link,useHistory } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { Link, useHistory } from "react-router-dom";
 import logo from "../images/logo.svg";
 import { login } from "../redux/actions/authAction";
-import { useDispatch,useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import "./Login.css";
 const Login = () => {
   const initialState = { email: "", password: "" };
   const [userData, setUserData] = useState(initialState);
   const { email, password } = userData;
-  const {auth}=useSelector(state=>state)
-  const history=useHistory()
+  const { auth } = useSelector((state) => state);
+  const history = useHistory();
   const dispatch = useDispatch();
-   useEffect(() => {
+  useEffect(() => {
     if (auth.token) history.push("/");
   }, [auth.token, history]);
   const handleChangeInput = (e) => {
@@ -20,7 +20,7 @@ const Login = () => {
   };
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(userData);
+
     dispatch(login(userData));
   };
   const [typePass, setTypePass] = useState(false);

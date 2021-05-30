@@ -9,7 +9,7 @@ export const login = (data) => async (dispatch) => {
   try {
     dispatch({ type: GLOBALTYPES.ALERT, payload: { loading: true } });
     const res = await postDataAPI("login", data);
-    console.log(res.data.user);
+
     dispatch({
       type: GLOBALTYPES.AUTH,
       payload: { token: res.data.access_token, user: res.data.user },
@@ -32,13 +32,13 @@ export const refreshToken = () => async (dispatch) => {
 
     try {
       const res = await postDataAPI("refrech_token");
-      console.log(res.data);
+
       dispatch({
         type: GLOBALTYPES.AUTH,
         payload: { token: res.data.access_token, user: res.data.user },
       });
-      console.log(res.data);
-      dispatch({ type: GLOBALTYPES.ALERT, payload: { loading: false } });
+
+      dispatch({ type: GLOBALTYPES.ALERT, payload: {} });
     } catch (err) {
       dispatch({
         type: GLOBALTYPES.ALERT,

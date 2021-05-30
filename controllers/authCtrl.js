@@ -60,7 +60,7 @@ const authCtrl = {
       res.cookie("refreshtoken", refresh_token, {
         httpOnly: true,
         path: "/api/refrech_token",
-        maxAge: 30 * 7 * 24 * 60 * 60 * 1000,
+        maxAge: 30 * 24 * 60 * 60 * 1000,
       });
       res.json({
         msg: "Login Success! ",
@@ -97,6 +97,7 @@ const authCtrl = {
           if (!user)
             return res.status(400).json({ msg: "This does not exist." });
           const access_token = createAccessToken({ id: result.id });
+
           res.json({
             access_token,
             user,

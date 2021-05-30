@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./Header.css";
+import Search from "./Search";
 import { Link, useLocation } from "react-router-dom";
 import logo from "../images/logo.svg";
 import SearchIcon from "@material-ui/icons/Search";
@@ -40,10 +41,7 @@ const Header = () => {
           style={{ filter: `${theme ? "invert(1)" : "invert(0)"}` }}
         ></img>
       </Link>
-      <div className="header__input">
-        <SearchIcon />
-        <input placeholder="مانعملوش بحث" type="text" />
-      </div>
+      <Search />
 
       <div className="header__centre">
         <ul className="navbar-nav flex-row">
@@ -97,10 +95,7 @@ const Header = () => {
             </div>
           </button>
           <div className="dropdown-menu drop ">
-            <Link
-              className="dropdown-item"
-              to={`/profile/${auth.user.username}`}
-            >
+            <Link className="dropdown-item" to={`/profile/${auth.user._id}`}>
               البروفيل
             </Link>
             <label

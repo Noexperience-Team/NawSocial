@@ -3,7 +3,7 @@
   padding: 15px 20px;
   justify-content: space-between;
   position: sticky;
-
+  width: 100%;
   /*background-color: #353535;*/
   background-image: linear-gradient(to left, #522352, #066364);
   z-index: 100;
@@ -23,6 +23,7 @@
 }
 .header__left > img {
   height: 50px;
+  cursor: pointer;
 }
 .header__input {
   display: flex;
@@ -32,6 +33,9 @@
   margin-left: 30px;
   border-radius: 33px;
   min-width: 45px;
+}
+.header__input > svg {
+  cursor: pointer;
 }
 .header__input > input {
   border: none;
@@ -94,11 +98,48 @@
 .MuiButtonBase-root:hover {
   color: #bcb8b1;
 }
-.drop {
-  width: wrap;
-  height: wrap;
-  margin-top: 5px;
-  margin-right: 5px;
-  position: relative;
-  left: 30px;
+.header__right .dropdown-menu {
+  position: absolute;
+  left: inherit;
+  right: 0;
+}
+
+.header__right .dropdown-menu label {
+  cursor: pointer;
+}
+.search .users {
+  position: absolute;
+  width: 250px;
+
+  align-items: center;
+  background-color: #eff2f5;
+  padding: 10px;
+  margin-left: 55px;
+  overflow: auto;
+  min-width: 25%;
+  max-height: calc(100vh-150px);
+  margin-top: 3px;
+}
+.search .close_search {
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  .header__centre {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 0 10px #ddd;
+    z-index: 2;
+    background-color: #646464;
+  }
+  .header__centre .navbar-nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .header__right .header__info .dropdown {
+    bottom: 100%;
+    top: auto;
+  }
 }
