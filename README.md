@@ -1,10 +1,10 @@
 # Welcome to our NawSociale repository 😄
 
-We really hope that you like our project, it is currently hosted on FireBase.
+We really hope that you like our project,
 
-All you need to do is to [Click on this](https://nawsociale.web.app/) and you will be directed to our website on FireBase.
+Soon it will be hosted 🙏
 
-A mini message will pop up, asking you to tipe your name. Please don't ignore that or you will miss the full features of our awsome work ! 🙏
+NawSocial it's a web application for developpers to find solution to your problem or to post your demo , it's a club for developpers to exchange their experiences
 
 ### We hope to see you soon with new feauters. 💛
 
